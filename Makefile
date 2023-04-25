@@ -7,5 +7,7 @@ build:
 
 	@cd dist; zip -r -9 ../osu-wii.zip .
 
-clean:
 	@rm -rf dist
+
+clean:
+	@rm osu-wii.zip
