@@ -1,6 +1,6 @@
 function love.load()
     tick = require("lib.tick")
-    json = require("lib.json")
+    binser = require("lib.binser")
 
     if love.filesystem.exists("save.json") then
         save = love.filesystem.read("save.json")
