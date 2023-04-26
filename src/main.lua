@@ -1,6 +1,7 @@
 function love.load()
     tick = require("lib.tick")
     binser = require("lib.binser")
+    
     wiimote = love.wiimote.getWiimotes()[1]
     cursor = love.graphics.newTexture("assets/pointer.png")
 
