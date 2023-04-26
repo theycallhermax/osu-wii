@@ -1,9 +1,9 @@
 function love.load()
-    tick = require("lib.tick")
-    binser = require("lib.binser")
-    
-    wiimote = love.wiimote.getWiimotes()[1]
-    cursor = love.graphics.newTexture("assets/pointer.png")
+    local tick = require("lib.tick")
+    local binser = require("lib.binser")
+
+    local wiimote = love.wiimote.getWiimotes()[1]
+    local cursor = love.graphics.newTexture("assets/pointer.png")
 
     if love.filesystem.exists("save.json") then
         save = binser.deserializeN(love.filesystem.read("save.bin"))
