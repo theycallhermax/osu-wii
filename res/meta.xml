@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <app version="1">
 	<name>osu!wii</name>
-	<version>2023.04.25</version>
+	<version>2023.04.30</version>
 	<coder>mdwalters</coder>
 	<short_description>Port of osu! to the Wii</short_description>
 	<long_description>osu!wii is a port of the free-to-play rhythm game, osu! to the Nintendo Wii, powered by WiiLÖVE. This attempt to port osu! to the Wii has been inspired by a thread on the osu! forums that a osu! port to the Wii is "impossible." This is a proof-of-concept that it is possible to port osu! to the Wii.</long_description>
