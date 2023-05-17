@@ -14,6 +14,10 @@ function love.load()
     end
 end
 
+function love.draw()
+    love.graphics.print("osu!wii", 500, 500)
+end
+
 function love.update(dt)
     love.filesystem.write("save.bin", binser.serialize(save)) 
 end
