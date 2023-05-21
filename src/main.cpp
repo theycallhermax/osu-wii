@@ -5,7 +5,7 @@
 static void *xfb = NULL;
 static GXRModeObj *rmode = NULL;
 
-int main() {
+void init_video() {
     VIDEO_Init();
     WPAD_Init();
     rmode = VIDEO_GetPreferredMode(NULL);
@@ -17,6 +17,17 @@ int main() {
     VIDEO_Flush();
     VIDEO_WaitVSync();
     if (rmode->viTVMode&VI_NON_INTERLACE) VIDEO_WaitVSync();
+}
 
-    printf("h\n");
+int main() {
+    init_video();
+
+    printf("osu!wii\n");
+
+    while(1) {
+        WPAD_ScanPads();
+        if (WPAD_ButtonsDown(0) & WPAD_BUTTON_HOME) {
+            exit(0);
+        }
+    }
 }
