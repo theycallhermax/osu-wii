@@ -4,3 +4,9 @@ build/
 # Compiled Wii binaries
 *.dol
 *.elf
+
+# Packed ZIP file
+osu-wii.zip
+
+# Distirbution folder
+dist/

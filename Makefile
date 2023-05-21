@@ -103,7 +103,7 @@ $(BUILD):
 #---------------------------------------------------------------------------------
 clean:
 	@echo clean ...
-	@rm -fr $(BUILD) $(OUTPUT).elf $(OUTPUT).dol
+	@rm -fr $(BUILD) $(OUTPUT).elf $(OUTPUT).dol dist $(OUTPUT).zip
 
 #---------------------------------------------------------------------------------
 run:
@@ -112,13 +112,13 @@ run:
 #---------------------------------------------------------------------------------
 pack:
 	@rm -rf dist
-	@mkdir -p dist/apps/osu-wii/data
+	@mkdir -p dist/apps/$(TARGET)
 
-	@cp -r res/* dist/apps/osu-wii
-	@mv osu-wii.dol boot.dol
-	@cp -r boot.dol dist/apps/osu-wii
+	@cp -r res/* dist/apps/$(TARGET)
+	@cp -r $(TARGET).dol dist/apps/$(TARGET)
+	@mv dist/apps/$(TARGET)/$(TARGET).dol dist/apps/$(TARGET)/boot.dol
 
-	@cd dist; zip -r -9 ../osu-wii.zip .
+	@cd dist; zip -r -9 ../$(TARGET).zip .
 
 #---------------------------------------------------------------------------------
 else
