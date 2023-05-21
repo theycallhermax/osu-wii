@@ -2,15 +2,16 @@
 #include <stdlib.h>
 
 #include <wiiuse/wpad.h>
+#include <grrlib.h>
 
-static void *xfb = NULL;
-static GXRModeObj *rmode = NULL;
+// static void *xfb = NULL;
+// static GXRModeObj *rmode = NULL;
 
 void init_video() {
     VIDEO_Init();
     WPAD_Init();
     rmode = VIDEO_GetPreferredMode(NULL);
-    xfb = MEM_K0_TO_K1(SYS_AllocateFramebuffer(rmode));
+    // xfb = MEM_K0_TO_K1(SYS_AllocateFramebuffer(rmode));
     console_init(xfb,20,20,rmode->fbWidth,rmode->xfbHeight,rmode->fbWidth*VI_DISPLAY_PIX_SZ);
     VIDEO_Configure(rmode);
     VIDEO_SetNextFramebuffer(xfb);
