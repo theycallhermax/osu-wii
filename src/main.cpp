@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 #include <wiiuse/wpad.h>
 
 static void *xfb = NULL;
@@ -17,6 +18,7 @@ void init_video() {
     VIDEO_Flush();
     VIDEO_WaitVSync();
     if (rmode->viTVMode&VI_NON_INTERLACE) VIDEO_WaitVSync();
+    printf("\x1b[2;0H");
 }
 
 int main() {
@@ -26,8 +28,6 @@ int main() {
 
     while(1) {
         WPAD_ScanPads();
-        if (WPAD_ButtonsDown(0) & WPAD_BUTTON_HOME) {
-            exit(0);
-        }
+        if (WPAD_ButtonsDown(0) & WPAD_BUTTON_HOME) exit(0);
     }
 }
