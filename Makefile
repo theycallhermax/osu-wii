@@ -111,7 +111,14 @@ run:
 
 #---------------------------------------------------------------------------------
 pack:
-	@exit 0
+	@rm -rf dist
+	@mkdir -p dist/apps/osu-wii/data
+
+	@cp -r res/* dist/apps/osu-wii
+	@mv osu-wii.dol boot.dol
+	@cp -r boot.dol dist/apps/osu-wii
+
+	@cd dist; zip -r -9 ../osu-wii.zip .
 
 #---------------------------------------------------------------------------------
 else
