@@ -5,7 +5,7 @@ build/
 *.dol
 *.elf
 
-# Packed ZIP file
+# Packed zip file
 osu-wii.zip
 
 # Distirbution folder

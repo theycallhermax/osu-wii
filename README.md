@@ -5,3 +5,8 @@ To build, you need to have devkitPro installed. If you don't, see the [devkitPro
 ```bash
 make
 ```
+## Packing for disturbution
+To pack the files into a zip file for disturbution, you must build first. See above for how to do it. Once you have built everything, run the following command:
+```bash
+make pack
+```
