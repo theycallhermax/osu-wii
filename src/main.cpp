@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string>
 #include <wiiuse/wpad.h>
 #include <grrlib.h>
 
@@ -22,8 +21,6 @@
 #define GRRLIB_WHITE 0xFFFFFFFF
 
 int main() {
-    string VERSION = "2023.06.13";
-    
     GRRLIB_Init();
     WPAD_Init();
 
