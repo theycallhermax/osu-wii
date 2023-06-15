@@ -6,6 +6,6 @@
 	<short_description>Port of osu! to the Wii</short_description>
 	<long_description>osu!wii is a port of the free-to-play rhythm game, osu! to the Nintendo Wii, written in C++, using GRRLIB. This attempt to port osu! to the Wii has been inspired by a thread on the osu! forums and GBAtemp that a osu! port to the Wii is "impossible." This is a proof-of-concept that it is possible to port osu! to the Wii.
     
-    GitHub: https://github.com/mdwalters/osu-wii
-    Wiibrew: https://wiibrew.org/wiki/User:Mdwalters/osu!wii</long_description>
+GitHub: https://github.com/mdwalters/osu-wii
+Wiibrew: https://wiibrew.org/wiki/User:Mdwalters/osu!wii</long_description>
 </app>
