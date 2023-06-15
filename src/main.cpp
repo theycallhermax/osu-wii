@@ -20,7 +20,7 @@
 #define GRRLIB_AQUA 0x00FFFFFF
 #define GRRLIB_WHITE 0xFFFFFFFF
 
-void main() {
+int main() {
     GRRLIB_Init();
     WPAD_Init();
 
