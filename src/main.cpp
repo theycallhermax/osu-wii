@@ -20,6 +20,11 @@
 #define GRRLIB_AQUA 0x00FFFFFF
 #define GRRLIB_WHITE 0xFFFFFFFF
 
+void _exit(int code) {
+    GRRLIB_Exit();
+    exit(code);
+}
+
 int main() {
     GRRLIB_Init();
     WPAD_Init();
@@ -33,6 +38,5 @@ int main() {
         GRRLIB_Render();
     }
 
-    GRRLIB_Exit();
-    exit(0);
+    _exit(0);
 }
